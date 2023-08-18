@@ -14,16 +14,19 @@ import java.util.List;
 public class CartController {
 
     private final CartService cartService;
-    public CartController (CartService cartService){
-        this.cartService=cartService;
+
+    public CartController(CartService cartService) {
+        this.cartService = cartService;
     }
+
     @GetMapping("/add")
-    public String add(@RequestParam List<Integer> items){
+    public String add(@RequestParam List<Integer> items) {
         cartService.add( items );
-        return " Товар "+items+" добавлен в корзину ";
+        return " Товар " + items + " добавлен в корзину ";
     }
+
     @GetMapping("/get")
-    public List<Integer> get(){
-        return  cartService.get();
+    public List<Integer> get() {
+        return cartService.get();
     }
 }

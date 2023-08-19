@@ -7,5 +7,4 @@ public interface CartService {
 void add(List<Integer> items);
 List<Integer> get();
 
-String text(String s);
 }

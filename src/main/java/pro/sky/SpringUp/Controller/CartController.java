@@ -26,7 +26,7 @@ public class CartController {
     }
 
     @GetMapping("/get")
-    public List<Integer> get() {
-        return cartService.get();
+    public String get() {
+        return" В вашей корзине лежат "+ cartService.get();
     }
 }
